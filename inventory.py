@@ -71,7 +71,7 @@ these shoes and then update it. This quantity should be
 updated on the file for this shoe.'''
 
 def re_stock():
-    lowest_quantity = min(shoes, key=lambda shoe: shoe.get_quantity())
+    lowest_quantity = min(shoes, key=lambda shoe: int(shoe.get_quantity()))
     print(lowest_quantity)
     quantity = input('Enter quantity: ')
     lowest_quantity.quantity = quantity
@@ -103,7 +103,7 @@ def value_per_item():
 highest quantity and print this shoe as being for sale'''
 
 def highest_qty():
-    highest_quantity = max(shoes, key=lambda shoe: shoe.get_quantity())
+    highest_quantity = max(shoes, key=lambda shoe: int(shoe.get_quantity()))
     print(highest_quantity)
 
 def main():
@@ -141,4 +141,3 @@ above. This menu should be inside the while loop.'''
 
 if __name__ == '__main__':
     main()
-
